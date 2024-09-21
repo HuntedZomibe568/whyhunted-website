@@ -1,3 +1,3 @@
 function getadmindata() {
-  alert("WIP")
+  var inputvalue = document.getelementbyid(
 }
