@@ -1,28 +1,92 @@
-<html>
-  <head>
-    <h1>Admin Site</h1>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-  <body>
-    <form>
+    .login-container {
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      width: 350px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>Admin Login</h1>
+    <form onsubmit="return false;">
       <label for="fname">First name:</label><br>
-      <input type="text" id="fname" name="fname"><br>
+      <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br>
       <label for="lname">Last name:</label><br>
-      <input type="text" id="lname" name="lname"><br>
+      <input type="text" id="lname" name="lname" placeholder="Enter your last name"><br><br>
       <button onclick="getadmindata()">Login</button>
     </form>
-    <script>
-      function getadmindata() {
-        var inputvalue = document.getElementById("fname").value
+    <p class="error-message" id="error">Incorrect username</p>
+  </div>
 
-        var matchvalue = "test"
+  <script>
+    function getadmindata() {
+      var inputvalue = document.getElementById("fname").value;
+      var matchvalue = "test";
 
-        if (inputvalue === matchvalue) {
-          window.open("https://aslkdjjlaskjlakzjdlkaskjkdlkkasj.whyhunted.xyz", '_blank').focus()
-        } else {
-          alert("INCORECT USERNAME")
-        }
+      if (inputvalue === matchvalue) {
+        window.open("https://aslkdjjlaskjlakzjdlkaskjkdlkkasj.whyhunted.xyz", '_blank').focus();
+      } else {
+        document.getElementById("error").style.display = "block";
       }
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
