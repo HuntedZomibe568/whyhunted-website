@@ -11,6 +11,18 @@
       <input type="text" id="lname" name="lname"><br>
       <button onclick="getadmindata()">Login</button>
     </form>
-    <script src="index.js"></script>
+    <script>
+      function getadmindata() {
+        var inputvalue = document.getelementbyid("fname").value
+
+        var matchvalue = "test"
+
+        if (inputvalue === matchvalue) {
+          alert("WELCOME!")
+        } else {
+          alert("INCORECT USERNAME")
+        }
+      }
+    </script>
   </body>
 </html>
