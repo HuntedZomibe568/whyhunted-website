@@ -1,6 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/", "dest": "/main.html" }
+    { "src": "/", "dest": "/main.html" },
+    { "src": "/login", "dest": "/login.html" }
   ]
 }
