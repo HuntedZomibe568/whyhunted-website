@@ -2,7 +2,9 @@
   <body>
     <h3>Please wait as you are redirected</h3>
     <script>
-      window.open("/login", '_self')
+      setTimeout(function() {
+        window.open("/login", '_self')
+      }, 5000)
     </script>
   </body>
 </html>
