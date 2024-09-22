@@ -1,10 +1,15 @@
 <html>
   <body>
     <h3>Please wait as you are redirected</h3>
+    <h3 id='redirect'>Redirected in 5</h3>
     <script>
-      setTimeout(function() {
-        window.open("/login", '_self')
-      }, 5000)
+      var time = 5
+
+      while(true) {
+        if (time > 0) {
+          document.getElementById('redirect').value = "Redirecting in", time
+        }
+      }
     </script>
   </body>
 </html>
