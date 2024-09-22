@@ -1,1 +1,7 @@
-
+{
+  "version": 2,
+  "routes": [
+    { "src": "/login", "dest": "/adminlogin.html" }
+    { "src": "/panel", "dest": "/adminpanel.html" }
+  ]
+}
