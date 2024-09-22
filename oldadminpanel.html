@@ -3,13 +3,9 @@
     <h3>Please wait as you are redirected</h3>
     <h3 id='redirect'>Redirected in 5</h3>
     <script>
-      var time = 5
-
-      while(true) {
-        if (time > 0) {
-          document.getElementById('redirect').value = "Redirecting in", time
-        }
-      }
+      setTimeout(function() {
+        window.open("/panel", "_self")
+      }, 2000)
     </script>
   </body>
 </html>
