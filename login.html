@@ -1,5 +1,149 @@
-<html>
-  <head>
-    <h3>Currently being made</h3>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://source.unsplash.com/1600x900/?city,night') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5); /* Optional: adds a semi-transparent dark layer over the background */
+      backdrop-filter: blur(8px); /* Applies blur to the background */
+    }
+
+    .login-container {
+      position: relative;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+      border-radius: 15px;
+      text-align: center;
+      width: 400px;
+      z-index: 10;
+      animation: slide-in 0.6s ease-out;
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      transition: box-shadow 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 255, 0.3);
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background-color: #ff0080;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e60073;
+      transform: translateY(-3px);
+    }
+
+    .error-message {
+      color: #ff5252;
+      margin-top: 10px;
+      font-size: 14px;
+      display: none;
+      animation: fade-in 0.5s forwards;
+    }
+
+    @keyframes slide-in {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay"></div> <!-- Background Blur Overlay -->
+  
+  <div class="login-container">
+    <h1>Login</h1>
+    <form onsubmit="return false;">
+      <input type="text" id="fname" name="fname" placeholder="Username"><br>
+      <input type="text" id="lname" name="lname" placeholder="Password"><br>
+      <button onclick="getadmindata()">Login</button>
+    </form>
+    <p class="error-message" id="error">Incorrect username</p>
+  </div>
+
+  <script>
+    function getadmindata() {
+      var inputvalue = document.getElementById("fname").value;
+      var matchvalue = "test";
+
+      if (inputvalue === matchvalue) {
+        window.open("https://admin.whyhunted.xyz/panel", '_self').focus();
+      } else {
+        var errorMsg = document.getElementById("error");
+        errorMsg.style.display = "block";
+        setTimeout(function() {
+          errorMsg.style.display = "none";
+        }, 3000); // Hides error message after 3 seconds
+      }
+    }
+  </script>
+</body>
 </html>
