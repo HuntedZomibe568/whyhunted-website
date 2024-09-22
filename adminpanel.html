@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <h2>WhyHunted admin site</h2>
+  </head>
+
+  <body>
+    <script>
+      window.onload = function() {
+        if (document.referrer === 'https://admin.whyhunted.xyz/') {
+          console.log("ADMIN ACCESS GRANTED")
+        } else {
+         window.open("https://admin.whyhunted.xyz", '_self') 
+      }
+    }
+    </script>
+  </body>
+</html>
