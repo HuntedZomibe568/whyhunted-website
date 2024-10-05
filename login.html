@@ -124,7 +124,7 @@
     <h1>Login</h1>
     <form onsubmit="return false;">
       <input type="text" id="fname" name="fname" placeholder="Username"><br>
-      <input type="text" id="lname" name="lname" placeholder="Password"><br>
+      <input type="password" id="lname" name="lname" placeholder="Password"><br>
       <button onclick="getadmindata()">Login</button>
       <button onclick="adminlogin()">Change to Admin Login</button>
     </form>
@@ -134,7 +134,8 @@
   <script>
     function getadmindata() {
       var inputvalue = document.getElementById("fname").value;
-      var matchvalue = "test";
+      var matchvalue = "Hunted";
+      var matchvalue2 = "AmberM17!"
 
       if (inputvalue === matchvalue) {
         window.open("/panel", '_self').focus();
