@@ -129,16 +129,26 @@
       <button onclick="adminlogin()">Change to Admin Login</button>
     </form>
     <p class="error-message" id="error">Incorrect username</p>
+    <p class="error-message" id="error">Incorrect password</p>
   </div>
 
   <script>
     function getadmindata() {
       var inputvalue = document.getElementById("fname").value;
+      var inputvalue2 = document.getElementById("lname").value;
       var matchvalue = "Hunted";
       var matchvalue2 = "AmberM17!"
 
       if (inputvalue === matchvalue) {
-        window.open("/panel", '_self').focus();
+        if (inputvalue2 === matchvaue2) {
+          window.open("/panel", "_self")
+        } else {
+          var errorMsg = document.getElementBuId("error");
+          errorMsg.style.display = "block"
+          setTimeout(function() {
+            errorMsg.style.display = "none"
+          }, 3000)
+        }
       } else {
         var errorMsg = document.getElementById("error");
         errorMsg.style.display = "block";
