@@ -125,7 +125,7 @@
     <form onsubmit="return false;">
       <input type="text" id="fname" name="fname" placeholder="Username"><br>
       <input type="password" id="lname" name="lname" placeholder="Password"><br>
-      <button onclick="getadmindata()">Login</button>
+      <button onclick="login()">Login</button>
       <button onclick="adminlogin()">Change to Admin Login</button>
     </form>
     <p class="error-message" id="error">Incorrect username</p>
@@ -133,7 +133,7 @@
   </div>
 
   <script>
-    function getadmindata() {
+    function login() {
       var inputvalue = document.getElementById("fname").value;
       var inputvalue2 = document.getElementById("lname").value;
       var matchvalue = "Hunted";
