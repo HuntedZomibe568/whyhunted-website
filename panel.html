@@ -2,8 +2,12 @@
   <h1>Panel Being made</h1>
 
   <script>
-    window.onload = function(
-      
-    )
+    window.onload = function() {
+        if (document.referrer === 'https://www.whyhunted.xyz/login') {
+          console.log("ACCESS GRANTED")
+        } else {
+         window.open("https://www.whyhunted.xyz/login", '_self') 
+      }
+    }
   </script>
 </html>
