@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Signup</title>
   <style>
     * {
       box-sizing: border-box;
@@ -87,14 +87,6 @@
       transform: translateY(-3px);
     }
 
-    .error-message {
-      color: #ff5252;
-      margin-top: 10px;
-      font-size: 14px;
-      display: none;
-      animation: fade-in 0.5s forwards;
-    }
-
     @keyframes slide-in {
       from {
         opacity: 0;
@@ -121,14 +113,13 @@
   <div class="overlay"></div> <!-- Background Blur Overlay -->
   
   <div class="login-container">
-    <h1>Login</h1>
+    <h1>Signup</h1>
     <form onsubmit="return false;">
       <input type="text" id="fname" name="fname" placeholder="Username"><br>
       <input type="text" id="email" name="email" placeholder="Email"><br>
       <input type="text" id="lname" name="lname" placeholder="Password"><br>
-      <button onclick="savedata()">Login</button>
+      <button onclick="savedata()">Signup</button>
     </form>
-    <p class="error-message" id="error">Incorrect username</p>
   </div>
 
   <script>
