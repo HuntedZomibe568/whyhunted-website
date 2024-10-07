@@ -1,5 +1,5 @@
 <html>
-  <h1>Panel Being made</h1>
+  <textarea id="WelcomeText" disabled></textarea>
 
   <script>
     window.onload = function() {
@@ -7,6 +7,17 @@
           console.log("ACCESS GRANTED")
         } else {
          window.open("https://www.whyhunted.xyz/login", '_self') 
+      }
+    }
+
+    var isAdmin = false
+
+    window.onload = function() {
+      if (document.referrer === 'https://admin.whyhunted.xyz/login') {
+        var isAdmin = true
+        document.getElementById("WelcomeText").disabled = false;
+      } else {
+        var isAdmin = false
       }
     }
   </script>
