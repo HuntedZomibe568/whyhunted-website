@@ -1,8 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/", "dest": "/main.html" },
-    { "src": "/login", "dest": "/login.html" },
-    { "src": "/panel", "dest": "/panel.html" }
+    { "src": "/privacy-policy", "dest": "/policy.html" },
+    { "src": "/terms-of-service", "dest": "/tos.html" }
   ]
 }
